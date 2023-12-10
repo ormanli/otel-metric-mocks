@@ -1,0 +1,28 @@
+with-expecter: true
+disable-version-string: true
+mockname: "Mock{{.InterfaceName}}"
+filename: "mock_{{.InterfaceNameLower}}.go"
+packages:
+  go.opentelemetry.io/otel/metric:
+    config:
+      dir: "."
+      outpkg: "mocks"
+    interfaces:
+      Float64Counter:
+      Float64Histogram:
+      Float64ObservableCounter:
+      Float64ObservableGauge:
+      Float64ObservableUpDownCounter:
+      Float64Observer:
+      Float64UpDownCounter:
+      Int64Counter:
+      Int64Histogram:
+      Int64ObservableCounter:
+      Int64ObservableGauge:
+      Int64ObservableUpDownCounter:
+      Int64Observer:
+      Int64UpDownCounter:
+      Meter:
+      MeterProvider:
+      Observer:
+      Registration:
